@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.*;
+
 
 public class Calculate {
     public void sum(int a, int b) {
