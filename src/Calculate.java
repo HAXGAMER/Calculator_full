@@ -30,6 +30,13 @@ public class Calculate {
         double c = Math.sqrt(a);
         System.out.println(c);
     }
+    public void quad(int a,int b,int c){
+        double x = Math.pow(b,2)-4*a*c;
+        double f = -b + Math.sqrt(x)/2*a;
+        double f2= -b - Math.sqrt(x)/2*a;
+        System.out.println(f);
+        System.out.println(f2);
+    }
 
     public void dis() {
         System.out.println("Welcome to the calculator...");
@@ -41,6 +48,7 @@ public class Calculate {
         System.out.println("4.Multipication");
         System.out.println("5.Power");
         System.out.println("6.Square Root");
+        System.out.println("7.quadratic Equation");
 
 
     }
@@ -86,6 +94,13 @@ public class Calculate {
                 double n= s.nextDouble();
                 squrt(n);
                 break;
+            case 7:
+                System.out.println("Welcome to quadratic equation");
+                System.out.println("Enter a,b,c eg; ax^2 + bx + c= 0");
+                int v = s.nextInt();
+                int z = s.nextInt();
+                int q= s.nextInt();
+                quad(v,z,q);
             default:
                 System.out.println("Check the number again");
 
