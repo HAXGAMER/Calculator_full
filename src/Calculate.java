@@ -69,7 +69,7 @@ public class Calculate {
         System.out.println("4.Multipication");
         System.out.println("5.Power");
         System.out.println("6.Square Root");
-        System.out.println("7.quadratic Equation");
+        System.out.println("7.Quadratic Equation");
 
 
     }
