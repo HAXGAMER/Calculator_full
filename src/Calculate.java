@@ -1,9 +1,8 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 import java.util.*;
 
-
-public class Calculate {
+public class Calculate extends QuadraticEquationSolver {
     public void sum(int a, int b) {
         int c = a + b;
         System.out.println(c);
@@ -31,12 +30,15 @@ public class Calculate {
         System.out.println(c);
     }
     public void quad(int a,int b,int c){
-        double x = Math.pow(b,2)-4*a*c;
-        double f = -b + Math.sqrt(x)/2*a;
-        double f2= -b - Math.sqrt(x)/2*a;
+
+        double f = -b + Math.sqrt((b*b-4*a*c))/2*a;
+        double f2= -b - Math.sqrt((b*b-4*a*c))/2*a;
         System.out.println(f);
         System.out.println(f2);
     }
+
+
+
 
     public void dis() {
         System.out.println("Welcome to the calculator...");
@@ -100,7 +102,7 @@ public class Calculate {
                 int v = s.nextInt();
                 int z = s.nextInt();
                 int q= s.nextInt();
-                quad(v,z,q);
+                solver(v,z,q);
             default:
                 System.out.println("Check the number again");
 
