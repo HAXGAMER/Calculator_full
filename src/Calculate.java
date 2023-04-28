@@ -80,7 +80,9 @@ public class Calculate {
         switch (o) {
             case 1:
                 System.out.println("Welcome The Numbers you want to Addition");
+                System.out.println("Enter a:");
                 int x = s.nextInt();
+                System.out.println("Enter b:");
                 int y = s.nextInt();
 
                sum(x, y);
@@ -106,12 +108,15 @@ public class Calculate {
                 break;
             case 5 :
                 System.out.println("Welcome Enter the numbers you want to Power");
+                System.out.println("Enter Base:");
                 int j=s.nextInt();
+                System.out.println("Enter Power:");
                 int l=s.nextInt();
                 power(j,l);
                 break;
             case 6 :
                 System.out.println("Welcome Enter the number you want to Root");
+                System.out.println("Enter Number :");
                 double n= s.nextDouble();
                 squrt(n);
                 break;
