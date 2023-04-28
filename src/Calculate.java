@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.*;
 
@@ -21,6 +22,14 @@ public class Calculate {
         int c= a*b;
         System.out.println(c);
     }
+    public void power(int a,int b){
+        int c = (int) Math.pow(a,b);
+        System.out.println(c);
+    }
+    public void squrt(double a){
+        double c = Math.sqrt(a);
+        System.out.println(c);
+    }
 
     public void dis() {
         System.out.println("Welcome to the calculator...");
@@ -30,6 +39,8 @@ public class Calculate {
         System.out.println("2.Substraction");
         System.out.println("3.Division");
         System.out.println("4.Multipication");
+        System.out.println("5.Power");
+        System.out.println("6.Square Root");
 
 
     }
@@ -64,6 +75,20 @@ public class Calculate {
                 int h =s.nextInt();
                 mul(g,h);
                 break;
+            case 5 :
+                System.out.println("Welcome Enter the numbers you want to Power");
+                int j=s.nextInt();
+                int l=s.nextInt();
+                power(j,l);
+                break;
+            case 6 :
+                System.out.println("Welcome Enter the number you want to Root");
+                double n= s.nextDouble();
+                squrt(n);
+                break;
+            default:
+                System.out.println("Check the number again");
+
 
         }
     }
