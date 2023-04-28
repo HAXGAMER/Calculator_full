@@ -2,7 +2,7 @@
 import java.util.Scanner;
 import java.util.*;
 
-public class Calculate extends QuadraticEquationSolver {
+public class Calculate  {
     public void sum(int a, int b) {
         int c = a + b;
         System.out.println(c);
@@ -35,6 +35,25 @@ public class Calculate extends QuadraticEquationSolver {
         double f2= -b - Math.sqrt((b*b-4*a*c))/2*a;
         System.out.println(f);
         System.out.println(f2);
+    }
+    public void solver(double a, double b, double c) {
+        Scanner s = new Scanner(System.in);
+
+
+
+        double discriminant = Math.pow(b, 2) - 4 * a * c;
+
+        if (discriminant >= 0) {
+            double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+            System.out.println("The roots are " + root1 + " and " + root2);
+        } else {
+            double realPart = -b / (2 * a);
+            double imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+
+            System.out.println("The roots are " + realPart + " + " + imaginaryPart + "i and " + realPart + " - " + imaginaryPart + "i");
+        }
     }
 
 
@@ -99,12 +118,21 @@ public class Calculate extends QuadraticEquationSolver {
             case 7:
                 System.out.println("Welcome to quadratic equation");
                 System.out.println("Enter a,b,c eg; ax^2 + bx + c= 0");
-                int v = s.nextInt();
-                int z = s.nextInt();
-                int q= s.nextInt();
-                solver(v,z,q);
+
+                System.out.print("Enter a: ");
+                double p = s.nextDouble();
+
+                System.out.print("Enter b: ");
+                double d = s.nextDouble();
+
+                System.out.print("Enter c: ");
+                double r  = s.nextDouble();
+                solver(p,d,r);
+
+                break;
             default:
                 System.out.println("Check the number again");
+                break;
 
 
         }
