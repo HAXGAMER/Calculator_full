@@ -1,4 +1,6 @@
 
+
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.*;
 
@@ -29,13 +31,8 @@ public class Calculate {
         double c = Math.sqrt(a);
         System.out.println(c);
     }
-    public void quad(int a,int b,int c){
 
-        double f = -b + Math.sqrt((b*b-4*a*c))/2*a;
-        double f2= -b - Math.sqrt((b*b-4*a*c))/2*a;
-        System.out.println(f);
-        System.out.println(f2);
-    }
+
     public void solver(double a, double b, double c) {
         Scanner s = new Scanner(System.in);
 
@@ -55,13 +52,81 @@ public class Calculate {
             System.out.println("The roots are " + realPart + " + " + imaginaryPart + "i and " + realPart + " - " + imaginaryPart + "i");
         }
     }
+    public void rd(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the principal");
+        int a= s.nextInt();
+        System.out.println("Enter the amount of months");
+        int b= s.nextInt();
+        System.out.println("Enter the amount of Rate");
+        int c = s.nextInt();
+
+
+        int Interest = a*b*(b+1)*c/2400;
+        int sol =a*b+Interest;
+        System.out.println("the Solution is "+  sol);
+
+    }
+    public void Gst(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the Value of the good:");
+        int Gst = s.nextInt();
+        System.out.println("Enter the rate :");
+        int r = s.nextInt();
+        System.out.println("What tpe of gst it is ");
+        System.out.println("1.Igst");
+        System.out.println("2.Cgst");
+        System.out.println("3.Sgst");
+        int q = s.nextInt();
+        switch (q){
+            case 1:
+                int Sol = Gst*r/100+Gst;
+                System.out.println("The Final Rate is "+Sol);
+                break;
+            case 2:
+                r=r/2;
+                int Sol2 = Gst*r/100+Gst;
+                System.out.println("The Final Rate is "+Sol2);
+                break;
+            case 3:
+                r=r/2;
+                int Sol3 = Gst*r/100+Gst;
+                System.out.println("The Final Rate is "+Sol3);
+                break;
+        }
+
+
+
+    }
+
+
+    public void choice(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Hello Welcome to The Grade Selector of the calculator ");
+        System.out.println("Enter What grade Maths you want to do");
+
+        System.out.println("1. 10th Grade Maths");
+        int i = s.nextInt();
+        switch (i) {
+            case 1:
+                System.out.println("Welcome to Grade 10 Maths Section");
+                Grade_10();
+                break;
+            default:
+                System.out.println("Check the number again");
+        }
+
+
+
+        }
+
+
 
 
 
 
     public void dis() {
-        System.out.println("Welcome to the calculator...");
-        System.out.println("Start by entering what you want to do");
+
         System.out.println("Select");
         System.out.println("1.Addition");
         System.out.println("2.Substraction");
@@ -70,13 +135,17 @@ public class Calculate {
         System.out.println("5.Power");
         System.out.println("6.Square Root");
         System.out.println("7.Quadratic Equation");
+        System.out.println("8.Recring deposit");
+        System.out.println("9.Gst");
 
 
     }
 
-    public void simimain() {
+    public void Grade_10() {
         Scanner s = new Scanner(System.in);
+        dis();
         int o = s.nextInt();
+        
         switch (o) {
             case 1:
                 System.out.println("Welcome The Numbers you want to Addition");
@@ -135,6 +204,12 @@ public class Calculate {
                 solver(p,d,r);
 
                 break;
+            case 8:
+                rd();
+                break;
+            case 9:
+                Gst();
+                break;
             default:
                 System.out.println("Check the number again");
                 break;
@@ -145,7 +220,7 @@ public class Calculate {
 
     public static void main(String[] args) {
         Calculate ob = new Calculate();
-        ob.dis();
-        ob.simimain();
+
+        ob.choice();
     }
 }
