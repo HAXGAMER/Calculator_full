@@ -1,6 +1,6 @@
 
 
-import java.sql.SQLOutput;
+import Calculator_maker.*;
 import java.util.Scanner;
 import java.util.*;
 
@@ -220,6 +220,8 @@ public class Calculate {
 
     public static void main(String[] args) {
         Calculate ob = new Calculate();
+        Calculator_maker ob1 = new Calculator_maker();
+        ob1.addition(1,2);
 
         ob.choice();
     }
