@@ -88,7 +88,7 @@ public class Calculator_maker {
         System.out.println("The length of the hypotenuse (side h) is: " + h);
 
     }
-    public void Si(double p, double r, double t){
+    public void Simple_Interest(double p, double r, double t){
 
 
                 double compoundInterest = p * Math.pow(1 + (r / 100), t) - p;
@@ -99,5 +99,12 @@ public class Calculator_maker {
 
 
 
+    }
+    public void Recring_Deposits(int p,int n,int r){
+        System.out.println("Note: Enter the time in months or the Answer may not be correct");
+        int I = p*n*(n+1)*r/2400;
+        int sol = p*n+I;
+        System.out.println(sol);
+        System.out.println("Interest =" +I);
     }
 }
