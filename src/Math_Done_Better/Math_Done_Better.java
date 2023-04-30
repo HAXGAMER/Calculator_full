@@ -1,6 +1,6 @@
-package Calculator_maker;
+package Math_Done_Better;
 import java.util.*;
-public class Calculator_maker {
+public class Math_Done_Better {
     public void addition(int a, int b){
         int c = a+b;
         System.out.println(c);
@@ -13,8 +13,8 @@ public class Calculator_maker {
         int c = a%b;
         System.out.println("Remainder ="+c);
     }
-    public void division_quotient(int a, int b){
-        int c = a/b;
+    public void division_quotient(double a, double b){
+        double c = a/b;
         System.out.println("Quotient ="+c);
     }
     public void Multiply(int a, int b){
