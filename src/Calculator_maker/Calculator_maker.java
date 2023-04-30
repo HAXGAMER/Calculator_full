@@ -80,4 +80,24 @@ public class Calculator_maker {
         }
 
     }
+    public void pytha( int b, int p){
+
+
+        int h = (int) Math.sqrt(Math.pow(p, 2) + Math.pow(b, 2));
+
+        System.out.println("The length of the hypotenuse (side h) is: " + h);
+
+    }
+    public void Si(double p, double r, double t){
+
+
+                double compoundInterest = p * Math.pow(1 + (r / 100), t) - p;
+                int amount = (int) (compoundInterest+ p);
+
+                System.out.println("Compound interest = " + compoundInterest);
+        System.out.println("The amount is " +amount);
+
+
+
+    }
 }
