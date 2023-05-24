@@ -77,6 +77,7 @@ public class Math_Done_Better {
                 break;
             default:
                 System.out.println("No right input given Exiting..");
+                break;
         }
 
     }
@@ -106,5 +107,19 @@ public class Math_Done_Better {
         int sol = p*n+I;
         System.out.println(sol);
         System.out.println("Interest =" +I);
+    }
+    public void Distance_Formula(int x1,int x2, int y1, int y2){
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        System.out.println(distance);
+    }
+    public void Fibonachhi_Printer(int numTerms){
+        int n1 = 0, n2 = 1;
+        for (int i = 1; i <= numTerms; i++) {
+            System.out.print(n1 + " ");
+            int nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+
     }
 }
