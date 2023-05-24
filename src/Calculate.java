@@ -1,6 +1,6 @@
 
 
-import Calculator_maker.*;
+
 import java.util.Scanner;
 import java.util.*;
 
@@ -98,6 +98,39 @@ public class Calculate {
 
 
     }
+    public void Lenear_Eqations(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the coefficients of the first equation (ax + by = c):");
+        System.out.print("a: ");
+        double a1 = scanner.nextDouble();
+        System.out.print("b: ");
+        double b1 = scanner.nextDouble();
+        System.out.print("c: ");
+        double c1 = scanner.nextDouble();
+
+        System.out.println("Enter the coefficients of the second equation (dx + ey = f):");
+        System.out.print("d: ");
+        double a2 = scanner.nextDouble();
+        System.out.print("e: ");
+        double b2 = scanner.nextDouble();
+        System.out.print("f: ");
+        double c2 = scanner.nextDouble();
+
+        double determinant = (a1 * b2) - (b1 * a2);
+
+        if (determinant == 0) {
+            System.out.println("The equations have no unique solution.");
+        } else {
+            double x = ((c1 * b2) - (b1 * c2)) / determinant;
+            double y = ((a1 * c2) - (c1 * a2)) / determinant;
+
+            System.out.println("The solution is:");
+            System.out.println("x = " + x);
+            System.out.println("y = " + y);
+        }
+
+    }
 
 
     public void choice(){
@@ -137,6 +170,7 @@ public class Calculate {
         System.out.println("7.Quadratic Equation");
         System.out.println("8.Recring deposit");
         System.out.println("9.Gst");
+        System.out.println("10.Linear Equation");
 
 
     }
@@ -210,6 +244,10 @@ public class Calculate {
             case 9:
                 Gst();
                 break;
+            case 10:
+                Lenear_Eqations();
+                break;
+
             default:
                 System.out.println("Check the number again");
                 break;
@@ -219,7 +257,21 @@ public class Calculate {
     }
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String userinput;
+        while (true){
+
+
         Calculate ob = new Calculate();
         ob.choice();
+            System.out.println("Do YOu want to run it again(yes/no)");
+        userinput = s.nextLine();
+        if(userinput.equalsIgnoreCase("no")){
+            System.out.println("Exiting the Program");
+            break;
+
+         }
+            System.out.println("Program Complete ");}
     }
+
 }
